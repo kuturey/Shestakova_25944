@@ -1,14 +1,12 @@
-#include <iostream>
-#include "temp.h"
+#include<iostream>
+#include "func.h"
 
 int main() {
-    int celc;
-    std::cout << "Temperature: ";
-    std::cin >> celc;
+	std::cout << "Input a: ";
+	int a, b;
+	std::cin >> a;
+	std::cout << "Input b: ";
+	std::cin >> b;
 
-    std::cout << "To Fahrenheit: " << toFahrenheit(celc) << "F\n";
-
-    std::cout << "To Fahrenheit (random): " << toFahrenheitRandom(celc) << "F\n";
-
-    return 0;
+	std::cout << "f(" << a << ", " << b << ") = " << f(a, b) << std::endl;
 }
