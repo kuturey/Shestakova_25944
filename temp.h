@@ -1,4 +1,11 @@
 #pragma once
 
-int toFahrenheit(int celc);
-int toFahrenheitRandom(int celc);
+namespace norm {
+	int toFahrenheit(int celc);
+}
+
+namespace mod{
+	int toFahrenheit(int celc);
+}
+
+
