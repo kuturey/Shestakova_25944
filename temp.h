@@ -1,11 +1,13 @@
 #pragma once
 
-namespace norm {
-	int toFahrenheit(int celc);
+namespace original {
+    template <typename ResultType, typename InputType>
+    ResultType toFahrenheit(const InputType& celc);
 }
 
-namespace mod{
-	int toFahrenheit(int celc);
+namespace modified {
+    template <typename ResultType, typename InputType>
+    ResultType toFahrenheit(InputType& celc);
 }
 
-
+#include "temp.tpp"

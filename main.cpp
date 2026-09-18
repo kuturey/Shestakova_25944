@@ -1,12 +1,19 @@
-#include<iostream>
-#include "func.h"
+#include <iostream>
+#include "temp.h"
 
 int main() {
-	std::cout << "Input a: ";
-	int a, b;
-	std::cin >> a;
-	std::cout << "Input b: ";
-	std::cin >> b;
+    int celcInt;
+    std::cout << "Temperature (int): ";
+    std::cin >> celcInt;
 
-	std::cout << "f(" << a << ", " << b << ") = " << f(a, b) << std::endl;
+    std::cout << "original: " << original::toFahrenheit<double, int>(celcInt) << "F\n";
+    std::cout << "modified: " << modified::toFahrenheit<double, int>(celcInt) << "F\n";
+
+    double celcD;
+    std::cout << "Temperature (double): ";
+    std::cin >> celcD;
+    std::cout << "original: " << original::toFahrenheit<int, double>(celcD) << "F\n";
+    std::cout << "modified: " << modified::toFahrenheit<int, double>(celcD) << "F\n";
+
+    return 0;
 }
