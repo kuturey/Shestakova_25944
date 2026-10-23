@@ -6,6 +6,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <iterator>
 
 // Читает целые числа из файла и возвращает их в виде vector<int>.
 std::vector<int> readFile(const std::string& filename)
@@ -165,17 +166,18 @@ int main()
     int sumFirst1 = std::accumulate(first.begin(), first.end(), 0);
     int sumSecond1 = std::accumulate(second.begin(), second.end(), 0);
 
+    int sumn int number)
+    {
+        return sum + number;
+    }
     // Второй вариант вычисления суммы
     int sumFirst2 = std::accumulate(
         first.begin(),
         first.end(),
         0,
-        [](int sum, int number)
-        {
-            return sum + number;
-        }
+        sumn
     );
-
+    
     int sumSecond2 = std::accumulate(
         second.begin(),
         second.end(),
@@ -202,13 +204,13 @@ int main()
     // Сумма первых десяти элементов без циклов
     int firstTen = std::accumulate(
         first.begin(),
-        first.begin() + 10,
+        std::next(first.begin(), 10),
         0
     );
 
     int secondTen = std::accumulate(
         second.begin(),
-        second.begin() + 10,
+        std::next(second.begin(), 10),
         0
     );
 
